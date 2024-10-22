@@ -1,0 +1,19 @@
+.VerificationMethods{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #f1f9fcbb;
+}
+.cardContainer {
+    width: 85%;
+    display: flex;  
+    justify-content: center; 
+  }
+  /* .SideImg{
+    width: 20%;
+  }
+  .SideImg img{
+    width: 100%;
+  } */
+  

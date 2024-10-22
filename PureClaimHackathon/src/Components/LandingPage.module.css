@@ -1,0 +1,109 @@
+/* #2370A1--Heading
+ #446592--wall blue
+ #4A89AC--slight Light
+ #ACE5F6--skyblue
+ #E3FCF9 --very light blue
+ 
+ */
+.LandingPage{
+   width: 100%;
+   min-height: 85vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.BannerContent{
+    width: 50%;
+    padding-left: 3rem;
+}
+.BannerHead span{
+    display: block;
+    font-size: 4rem;
+    color: rgb(30, 110, 167);
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.BannerTitle{
+  font-size: 1.3rem;
+}
+
+.BannerImageBox{
+    width: 40%;
+}
+.BannerImage{
+    width: 80%;
+    filter: drop-shadow(15px 0px 10px rgba(59, 58, 58, 0.671));
+}
+.Objectives,.AboutUs{
+    width: 100%;
+    padding: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(166, 214, 248);
+}
+.ObjHeading,.AboutHeading{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.ObjTitle,.AboutTitle{
+    font-family: sans-serif;
+    font-size:1.5rem;
+    margin: 0px;
+    font-weight: 600;
+}
+.ObjBox,.About{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    max-height: fit-content;
+}
+.About{
+    height: 33rem;
+    justify-content: center;
+}
+.AboutUs{
+    width: 70%;
+    padding: 3rem 3rem;
+     background-color: rgb(244, 244, 244);
+     align-items: flex-start;
+}
+.AboutHeading,.AboutTitle{
+    color:  rgb(30, 110, 167);;
+}
+.AboutImg{
+    width: 30%;
+}
+.AboutImg img{
+    width: 100%;
+}
+.AboutContent{
+    font-size:1rem;
+    letter-spacing: 0.01rem;
+    width: 100%;
+}   
+.OurTeam{
+    /* background: url("../Images/Home.png"); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    /* background-color:  rgb(166, 214, 248); */
+}
+.Team{
+    width: 100%;
+    min-height: 28rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.TeamHeading{
+    text-align: center;
+    margin: 0px auto;
+}

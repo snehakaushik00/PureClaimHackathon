@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    padding-left: 3rem;
+}
+.navs{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.PureClaim{
+    width: 20%;
+    color: rgb(37, 135, 205);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+.links{
+    text-decoration: none;
+    color:black;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+.links:hover{
+        background-color: rgb(37, 135, 205);
+        color: white;
+        transform:scaleX(2px);
+        transition: 300ms ease-in-out;
+}
+.active{
+    color: white;
+    background-color: rgb(37, 135, 205);
+}
