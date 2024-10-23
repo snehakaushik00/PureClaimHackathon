@@ -29,7 +29,7 @@ function Output() {
 
 
         {data ? (
-          <p className={styles.reason}>{output.why}</p>
+          output.why.map((reason)=>(<p className={styles.reason}><div className={styles.bullet}/>{reason}</p>))
         ) : (
           <p className={styles.reason}>No data available</p>
         )}

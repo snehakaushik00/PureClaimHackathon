@@ -36,49 +36,49 @@ function UrlForm() {
       imgPath: JioMart,
     },
   ];
-  // const [url, setUrl] = useState("");
-  // const [selectedWebsite, setSelectedWebsite] = useState("");
-  // const [error, setError] = useState(null);
-  // const [productData, setProductData] = useState(null);
-  // const [loading, setLoading] = useState(false);
-  // const { isAnalyzing, handleAnalyse } = useContext(ContextProvider);
+  const [url, setUrl] = useState("");
+  const [selectedWebsite, setSelectedWebsite] = useState("");
+  const [error, setError] = useState(null);
+  const [productData, setProductData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const { isAnalyzing, handleAnalyse } = useContext(ContextProvider);
 
-  // const handleOptionChange = (e) => {
-  //   console.log(e.target.value);
-  //   setSelectedWebsite(e.target.value);
-  // };
+  const handleOptionChange = (e) => {
+    console.log(e.target.value);
+    setSelectedWebsite(e.target.value);
+  };
 
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();  
-  //   setError(null);
-  //   setProductData(null);
-  //   setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();  
+    setError(null);
+    setProductData(null);
+    setLoading(true);
 
-  //   if (!url || !selectedWebsite) {
-  //     setError("Please enter a URL and select a website");
-  //     setLoading(false);
-  //     return;
-  //   }
+    if (!url || !selectedWebsite) {
+      setError("Please enter a URL and select a website");
+      setLoading(false);
+      return;
+    }
 
-  //   try {
-  //     const response = await fetch(
-  //       `https://pure-claim-url-extractor.vercel.app/extract?url=${encodeURIComponent(
-  //         url
-  //       )}&website=${selectedWebsite}`
-  //     );
-  //     const data = await response.json();
-  //     if (response.ok) {
-  //       setProductData(data);
-  //     } else {
-  //       setError(data.error);
-  //     }
-  //   } catch (err) {
-  //     setError("An error occurred while fetching data.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+    try {
+      const response = await fetch(
+        `https://pure-claim-url-extractor.vercel.app/extract?url=${encodeURIComponent(
+          url
+        )}&website=${selectedWebsite}`
+      );
+      const data = await response.json();
+      if (response.ok) {
+        setProductData(data);
+      } else {
+        setError(data.error);
+      }
+    } catch (err) {
+      setError("An error occurred while fetching data.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className={styles.URLContainer}>
@@ -86,8 +86,8 @@ function UrlForm() {
         <input
           type="url"
           placeholder="Enter product URL and choose the platform whose url you are using"
-          // value={url}
-          // onChange={(e) => setUrl(e.target.value)}
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
           required
           className={styles.urlInput}
         />
@@ -97,29 +97,29 @@ function UrlForm() {
             <WebsiteCards
               siteName={site.siteName}
               imgPath={site.imgPath}
-             // handleOptionChange={handleOptionChange}
-              // selectedWebsite={selectedWebsite}
+              handleOptionChange={handleOptionChange}
+              selectedWebsite={selectedWebsite}
             />
           ))}
         </div>
 
 
-        {/* {!productData && (
+        {!productData && (
           <button
             type="submit"
-            // disabled={loading}
-            // onClick={handleSubmit}
+            disabled={loading}
+            onClick={handleSubmit}
             className={styles.submitBtn}
           >
             Submit
           </button>
-        )} */}
+        )}
        
 
-        {/* {loading && <p>Analyzing...</p>} */}
+        {loading && <p>Analyzing...</p>}
 
-        {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-        {/* {productData && (
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        {productData && (
           <div style={{ marginTop: "20px" }}>
             <h3>Extracted Product Data:</h3>
             <p>
@@ -129,8 +129,8 @@ function UrlForm() {
               <strong>Ingredients:</strong> {productData.ingredientsText}
             </p>
           </div>
-        )} */}
-        {/* {productData && (
+        )}
+        {productData && (
           <button
             className={styles.analyzebtn}
             onClick={() => {
@@ -138,10 +138,10 @@ function UrlForm() {
               const Ingredients = productData.ingredientsText;
               handleAnalyse(Claims, Ingredients);
             }}
-          > */}
-            {/* {isAnalyzing ? "Analyzing..." : "Analyze"}
+          >
+            {isAnalyzing ? "Analyzing..." : "Analyze"}
           </button>
-        )} */}
+        )}
       </div>
     </div>
   );

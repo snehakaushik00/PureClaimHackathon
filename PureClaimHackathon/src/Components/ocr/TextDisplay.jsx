@@ -2,7 +2,7 @@ import styles from "../ImageForm.module.css";
 
 function TextDisplay({  text }) {
   return (
-    text && (
+    text ?? (
       <div className={styles.ExtractedText}>
         <p>{text}</p>
       </div>

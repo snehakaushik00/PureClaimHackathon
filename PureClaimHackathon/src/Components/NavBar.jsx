@@ -6,7 +6,7 @@ function NavBar() {
 
   return (
     <div className={styles.navbar}>
-      <p className={styles.PureClaim}>PureClaim</p>
+      <p className={styles.PureClaim}>AILabelchecker</p>
       <div className={styles.navs}>
         <Link
           className={`${styles.links}
